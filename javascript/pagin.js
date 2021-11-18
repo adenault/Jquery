@@ -5,7 +5,7 @@
  * (c) 2013 Korori - korori-gaming.com
  * license: http://www.opensource.org/licenses/mit-license.php
  */
-(function (e) {
+(function ($) {
     /*
         Pagin System Plugin
     */

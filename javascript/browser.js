@@ -6,15 +6,9 @@
 	* license: http://www.opensource.org/licenses/mit-license.php
 */
 
-/*
-	Jquery Plugin Start
-*/
-
 (function ($) {
 
-	/*
-		Browser Check Plugin
-	*/
+
 	if (!$.browser) {
 		$.browser = {
 			chrome: false,

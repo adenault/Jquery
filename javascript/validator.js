@@ -5,8 +5,8 @@
 	* (c) 2013 Korori - korori-gaming.com
 	* license: http://www.opensource.org/licenses/mit-license.php
 */
-	(function($){
-		var iSize;
+(function ($) {
+	var iSize;
 	/*
 		Validate Regex Input
 	*/

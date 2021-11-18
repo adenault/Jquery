@@ -7,7 +7,7 @@
 	* license: http://www.opensource.org/licenses/mit-license.php
 */
 
-(function (e) {
+(function ($) {
     $.Scroller = {
         up: function (speed) {
             $("html, body").animate({
