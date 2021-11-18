@@ -43,7 +43,7 @@
                     alter = Math.ceil(shownonbar / 2);
                 pagin_internal = '';
                 start_pos = (current_page - alter < 0 ? 1 : current_page - alter);
-                end_pos = current_page - alter < 0 ? number_page :number_page < (current_page + alter) ?number_page :current_page + alter;
+                end_pos = current_page - alter < 0 ? number_page : number_page < (current_page + alter) ? number_page : current_page + alter;
 
                 if (number_page > 1 && 1 < current_page)
                     pagin_internal += '<li class="pagin_prev"  data-prev="' + (current_page - 1) + '" data-current="' + current_page + '"><a href="#">&laquo;</a></li>';

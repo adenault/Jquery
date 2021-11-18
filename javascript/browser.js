@@ -7,13 +7,6 @@
 */
 
 /*
-	Variables
-*/
-
-var jpopupStatus = 0;
-var loaderStatus = 0;
-
-/*
 	Jquery Plugin Start
 */
 

@@ -7,7 +7,7 @@
 */
 (function (e) {
 
-    var bootstrap_title = "Houston County Probate";
+    var bootstrap_title = "Korori-Gaming";
     $.clipboard = {
         copy: function (item) {
             if (!navigator.clipboard) {

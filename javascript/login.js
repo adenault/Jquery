@@ -7,6 +7,7 @@
 	* license: http://www.opensource.org/licenses/mit-license.php
 */
 (function (e) {
+    var bootstrap_title = "Korori-Gaming";
     var reference = {
         "password": '#txtPassword',
         "username": '#txtUsername',
@@ -16,9 +17,9 @@
     e.fn.login = function (options) {
         var dynamic = Math.floor(Math.random() * 4);
         var settings = $.extend({}, reference, options);
-        var idPassword = (typeof settings_buttons.label == "string" ? settings.password : reference.password)+ dynamic;
-        var idUsername = (typeof settings_buttons.label == "string" ? settings.username : reference.username)+ dynamic;
-        var rememberme = (typeof settings_buttons.label == "string" ? settings.rememberme : reference.rememberme);
+        var idPassword = (typeof settings.label == "string" ? settings.password : reference.password)+ dynamic;
+        var idUsername = (typeof settings.label == "string" ? settings.username : reference.username)+ dynamic;
+        var rememberme = (typeof settings.label == "string" ? settings.rememberme : reference.rememberme);
         var appendto = this.attr('id') + dynamic;
         if ($('#login_' + appendto).length == 0) {
             $('#' + appendto + ' tfoot tr td div').html(
@@ -27,7 +28,7 @@
                     '<li><input style="width: 100%; background-color: rgb(255, 255, 204); color: rgb(0, 0, 0);" aria-labelledby="' + idUsername + '" aria-label="username" type="text" value="" id="' + idUsername + '" name="' + idUsername + '" maxlength="30"></li>' +
                     '<li><label for="' + idPassword + '">Password</label></li>' +
                     '<li><div style="position: relative;display: inline-block;width: 100%;"><input style="width:100%;" aria-labelledby="password" aria-label="password" type="password" id="' + idPassword + '" name="' + idPassword + '" maxlength="30" /> <span toggle="#password-field" style=" position: absolute;right: 1px;top: 50%;transform: translateY(-50%);z-index: 100;font-size: 18px;"  class="fa fa-fw fa-eye field_icon toggle-password"></span></div></li>' +
-                    '<li><input class="default" type="button" value="login" id="btnLoginM" style="width:100%;;"></li>' +
+                    '<li><input class="default" type="button" value="login" id="btnLogin" style="width:100%;;"></li>' +
                     (rememberme ? '<li><label class="switch" data-children-count="1"><input type="checkbox" id="remember" aria-label="Remember Me"> <span class="slider"></span></label></li>' : '') +
                 '</ul>'
             );
@@ -61,7 +62,7 @@
                 if (data.status) {
                     $(location).attr("href", "/");
                 } else
-                    $.jpop.alert(data.message, 'Houston County Website', {
+                    $.jpop.alert(data.message, bootstrap_title, {
                         type: 'warning'
                     }, {
                         resizable: false,
